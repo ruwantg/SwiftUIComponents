@@ -13,6 +13,7 @@ struct Component: Identifiable {
     let systemIconName: String
     let category: ComponentCategory
     let documentationURL: URL?
+    let type: ComponentType
 }
 
 enum ComponentCategory: String, CaseIterable {
@@ -20,4 +21,35 @@ enum ComponentCategory: String, CaseIterable {
     case controls = "Controls"
     case containerViews = "Container Views"
     case list = "List"
+}
+
+enum ComponentType: String {
+    case text
+    case label
+    case textField
+    case secureField
+    case textArea
+    case image
+    case button
+    case menu
+    case link
+    case slider
+    case stepper
+    case toggle
+    case picker
+    case datePicker
+    case colorPicker
+    case progressView
+    case hStack
+    case vStack
+    case zStack
+    case form
+    case navigationView
+    case alerts
+    case sheets
+    case plainList
+    case insetList
+    case groupedList
+    case insetGroupedList
+    case sidebarList
 }
